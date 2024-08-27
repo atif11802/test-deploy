@@ -1,0 +1,351 @@
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<style>
+		.poppins-medium { font-weight: 500; font-style: normal; } .poppins-semibold
+		{ font-weight: 600; font-style: normal; } .poppins-bold { font-weight: 700;
+		font-style: normal; } .doc-body { font-family: "Poppins", sans-serif;
+		font-weight: 400; font-style: normal; width: 893px; max-width: 804px;
+		overflow: hidden; height: 1263px; display: flex; flex-direction: column;
+		justify-content: space-between; border-top: 16px solid #ffc800;
+		border-bottom: 16px solid #ffc800; background-color: rgb(252, 252, 250);
+		padding: 31px 62px 31px 62px; /* padding-right: 62px; */ } .doc-body p {
+		margin: 0px; } table, th, td { border: 0; border-collapse: collapse; } table
+		thead th { font-size: 24px; font-weight: 400; font-style: normal; padding:
+		0px 24px; text-align: start; } table tbody td { font-size: 13px;
+		font-weight: 400; font-style: normal; padding: 0px 24px; text-align: start;
+		} .signature { width: fit-content; border-top: 1px solid black; padding: 4px
+		8px 0px 8px; white-space: nowrap; text-align: center; font-size: 11px; }
+	</style>
+	<body>
+		<div class="doc-body">
+			<div
+				style="
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-items: center;
+					align-items: center;
+				"
+			>
+				<img
+					style="width: 150px; height: auto"
+					src="https://cdn.ostad.app/public/upload/2024-03-20T04-26-32.799Z-ostad_logo_light@512x%20(2).png"
+				/>
+				<!-- start header  -->
+				<div
+					style="
+						margin-top: 24px;
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						gap: 16px;
+					"
+				>
+					<div>
+						<p style="font-size: 33px" class="poppins-medium">
+							Assessment Details
+						</p>
+						<p
+							class="poppins-medium"
+							style="margin-top: -4px; line-height: 22px"
+						>
+							{{course_title}}
+							<br />{{batch_code}}
+						</p>
+					</div>
+					<img style="width: 124px; height: 124px" src="/images/myQRCode.png" />
+				</div>
+				<!-- end header  -->
+
+				<!-- start student & batch info  -->
+				<div
+					style="
+						width: 100%;
+						display: grid;
+						grid-template-columns: repeat(2, minmax(0, 1fr));
+						column-gap: 32px;
+						row-gap: 8px;
+					"
+				>
+					<p
+						class="poppins-bold"
+						style="
+							font-size: 19px;
+							border-bottom: 3px solid #ffc800;
+							padding-bottom: 6px;
+						"
+					>
+						Student Name:
+						{{learner_name}}
+					</p>
+					<p
+						class="poppins-bold"
+						style="
+							font-size: 19px;
+							border-bottom: 3px solid #ffc800;
+							padding-bottom: 6px;
+						"
+					>
+						Starting Date:
+						{{batch_start_date}}
+					</p>
+					<div style="display: flex; align-items: end">
+						<p
+							class="poppins-bold"
+							style="
+								width: 100%;
+								margin-top: auto;
+								font-size: 19px;
+								border-bottom: 3px solid #ffc800;
+								padding-bottom: 6px;
+							"
+						>
+							Grade:
+							{{grade}}
+						</p>
+					</div>
+
+					<p
+						class="poppins-bold"
+						style="
+							font-size: 11px;
+							border-bottom: 3px solid #ffc800;
+							padding-bottom: 6px;
+						"
+					>
+						Course Instructor:
+						{{instructors_name}}
+					</p>
+				</div>
+				<!-- end student & batch info  -->
+
+				<!-- start technical skills  -->
+				<table style="width: 100%; margin-top: 32px">
+					<thead>
+						<tr style="background: #ffc800 !important">
+							<th style="width: 50%">Technical Skills</th>
+							<th style="width: 25%">Level</th>
+							<th style="width: 25%">Marks</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{! <tr>
+							<td>HTML</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>CSS</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>JavaScript</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>Git & Github</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>Backend (django, flask)</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr> }}
+
+						{{#each technical_skills}}
+							<tr>
+								<td>{{skill_name}}</td>
+								<td>{{skill_level}}</td>
+								<td>{{skill_marks}}</td>
+							</tr>
+						{{/each}}
+
+					</tbody>
+				</table>
+				<!-- end technical skills  -->
+
+				<!-- start problem solving skills  -->
+				<table style="width: 100%; margin-top: 4px">
+					<thead>
+						<tr style="background: #ffc800 !important">
+							<th style="width: 50%">Problem Solving Skills</th>
+							<th style="width: 25%">Level</th>
+							<th style="width: 25%">Marks</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{! <tr>
+							<td>HTML</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>CSS</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>JavaScript</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>Git & Github</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>Backend (django, flask)</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr> }}
+						{{#each problem_solving_skills}}
+							<tr>
+								<td>{{skill_name}}</td>
+								<td>{{skill_level}}</td>
+								<td>{{skill_marks}}</td>
+							</tr>
+						{{/each}}
+
+					</tbody>
+				</table>
+				<!-- end problem solving skills  -->
+
+				<!-- start soft skills  -->
+				<table style="width: 100%; margin-top: 4px">
+					<thead>
+						<tr style="background: #ffc800">
+							<th style="width: 50%">Soft Skills</th>
+							<th style="width: 25%">Level</th>
+							<th style="width: 25%">Marks</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{! <tr>
+							<td>HTML</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>CSS</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>JavaScript</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>Git & Github</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td>Backend (django, flask)</td>
+							<td>Excellent</td>
+							<td>85</td>
+						</tr> }}
+
+						{{#each soft_skills}}
+							<tr>
+								<td>{{skill_name}}</td>
+								<td>{{skill_level}}</td>
+								<td>{{skill_marks}}</td>
+							</tr>
+						{{/each}}
+					</tbody>
+				</table>
+				<!-- end soft skills  -->
+
+				<!-- start recommended  -->
+				<div
+					style="
+						position: relative;
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+					"
+				>
+					<img
+						src="https://cdn.ostad.app/public/upload/2024-08-18T11-19-25.581Z-seal.png"
+						style="width: 200px; position: absolute; top: -85px; right: -16px"
+					/>
+					<div
+						style="
+							height: 35px;
+							display: flex;
+							align-items: center;
+							padding: 0px 24px;
+							margin-top: 4px;
+							background: #ffc800;
+						"
+					>
+						<p class="poppins-bold">RECOMMENDED AS & BY</p>
+					</div>
+					<p style="margin-top: 8px">
+						<i>
+							This assessment certifies that the candidate named ”{{learner_name}}”
+							is ready to be hired forthe following posts:
+						</i>
+					</p>
+					<br />
+					<p style="padding-left: 24px">
+
+						{{#each recommended_posts}}
+							{{incrementedIndex @index}}.
+							{{this}}<br />
+						{{/each}}
+
+					</p>
+				</div>
+				<!-- end recommended  -->
+			</div>
+			<div style="width: 100%; display: flex; justify-content: space-between">
+				<div style="display: flex; gap: 32px; align-items: start">
+					<div class="signature">
+						<p>
+							Tamim Shahriar Subeen
+							<br />Trainer
+						</p>
+					</div>
+					<div class="signature">
+						<p>
+							Hasin Hayder
+							<br />Trainer
+						</p>
+					</div>
+					<div class="signature">
+						<p>
+							Rabbil Hasan Ripom
+							<br />Trainer
+						</p>
+					</div>
+					<div class="signature">
+						<p>
+							Nayeem Hassan
+							<br />Trainer
+						</p>
+					</div>
+				</div>
+				<div class="signature">
+					<p>
+						Abdullah Al Musabbir
+						<br />Trainer
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
