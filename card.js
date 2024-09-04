@@ -55,37 +55,64 @@ const test = async () => {
 			batch_start_date: "2021-07-01",
 			grade: "A",
 			instructors_name: "Jane Doe, Alice",
-			technical_skills: [
-				{
-					skill_name: "Node.js",
-					skill_level: "Intermediate",
-					skill_marks: 90,
-				},
-				{
-					skill_name: "React",
-					skill_level: "Intermediate",
-					skill_marks: 80,
-				},
-			],
-			problem_solving_skills: [
-				{
-					skill_name: "html",
-					skill_level: "Intermediate",
-					skill_marks: 90,
-				},
-				{
-					skill_name: "css",
-					skill_level: "Intermediate",
-					skill_marks: 80,
-				},
-			],
-			soft_skills: [
-				{
-					skill_name: "html",
-					skill_level: "Intermediate",
-					skill_marks: 90,
-				},
-			],
+			// technical_skills: [
+			// 	{
+			// 		skill_name: "Node.js",
+			// 		skill_level: "Intermediate",
+			// 		skill_marks: 90,
+			// 	},
+			// 	{
+			// 		skill_name: "React",
+			// 		skill_level: "Intermediate",
+			// 		skill_marks: 80,
+			// 	},
+			// ],
+			// problem_solving_skills: [
+			// 	{
+			// 		skill_name: "html",
+			// 		skill_level: "Intermediate",
+			// 		skill_marks: 90,
+			// 	},
+			// 	{
+			// 		skill_name: "css",
+			// 		skill_level: "Intermediate",
+			// 		skill_marks: 80,
+			// 	},
+			// ],
+			// soft_skills: [
+			// 	{
+			// 		skill_name: "html",
+			// 		skill_level: "Intermediate",
+			// 		skill_marks: 90,
+			// 	},
+			// ],
+
+			skills: {
+				random22: [
+					{
+						skill_name: "Node.js",
+						skill_level: "Intermediate",
+						skill_marks: 90,
+					},
+					{
+						skill_name: "React",
+						skill_level: "Intermediate",
+						skill_marks: 80,
+					},
+				],
+				random2: [
+					{
+						skill_name: "html",
+						skill_level: "Intermediate",
+						skill_marks: 90,
+					},
+					{
+						skill_name: "css",
+						skill_level: "Intermediate",
+						skill_marks: 80,
+					},
+				],
+			},
 			recommended_posts: [
 				"Introduction to Handlebars",
 				"Advanced Handlebars Techniques",
