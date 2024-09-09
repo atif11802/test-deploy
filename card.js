@@ -118,6 +118,14 @@ const test = async () => {
 				"Advanced Handlebars Techniques",
 				"Handlebars with Node.js",
 			],
+
+			trainers: [
+				{
+					name: "tamim shahriar subeen",
+					signature:
+						"https://cdn.ostad.app/public/upload/2024-09-08T08-31-41.041Z-signature.jpg",
+				},
+			],
 		};
 
 		const renderedTemplate = template(data);

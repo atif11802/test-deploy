@@ -22,6 +22,10 @@
 		font-weight: 400; font-style: normal; padding: 0px 24px; text-align: start;
 		} .signature { width: fit-content; border-top: 1px solid black; padding: 4px
 		8px 0px 8px; white-space: nowrap; text-align: center; font-size: 11px; }
+		.signature { width: fit-content; border-top: 1px solid black; padding: 4px
+		8px 0px 8px; white-space: nowrap; text-align: center; font-size: 11px; }
+		.sig-wrapper { display: flex; flex-direction: column; align-items: center; }
+		.signature-img { height: 26px; width: auto; }
 	</style>
 	<body>
 		<div class="doc-body">
@@ -192,38 +196,40 @@
 				</div>
 				<!-- end recommended  -->
 			</div>
-			<div style="width: 100%; display: flex; justify-content: space-between">
+			<div
+				style="
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: end;
+				"
+			>
 				<div style="display: flex; gap: 32px; align-items: start">
-					<div class="signature">
-						<p>
-							Tamim Shahriar Subeen
-							<br />Trainer
-						</p>
-					</div>
-					<div class="signature">
-						<p>
-							Hasin Hayder
-							<br />Trainer
-						</p>
-					</div>
-					<div class="signature">
-						<p>
-							Rabbil Hasan Ripom
-							<br />Trainer
-						</p>
-					</div>
-					<div class="signature">
-						<p>
-							Nayeem Hassan
-							<br />Trainer
-						</p>
-					</div>
+
+					{{#each trainers}}
+						<div class="sig-wrapper">
+							<img class="signature-img" src={{signature}} />
+							<div class="signature">
+								<p>
+									{{name}}
+									<br />Trainer
+								</p>
+							</div>
+						</div>
+					{{/each}}
+
 				</div>
-				<div class="signature">
-					<p>
-						Abdullah Al Musabbir
-						<br />Trainer
-					</p>
+				<div class="sig-wrapper">
+					<img
+						class="signature-img"
+						src="https://cdn.ostad.app/public/upload/2024-09-08T08-31-41.041Z-signature.jpg"
+					/>
+					<div class="signature">
+						<p>
+							Abdullah Al Musabbir
+							<br />Founder & CEO, Ostad
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
